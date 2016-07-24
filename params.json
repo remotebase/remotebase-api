@@ -1,0 +1,6 @@
+{
+  "name": "Remotebase-api",
+  "tagline": "The official public API of RemoteBase",
+  "body": "# RemoteBase API\r\n\r\nThe official API of RemoteBase. *The API is still experimental and can change.*\r\n\r\n\r\n## Honor code\r\n\r\n* Access the API at a reasonable rate.\r\n* Make something of your own. I don't mind if you build a clone of RemoteBase, but\r\nthe world needs to hear your voice, not mine.\r\n\r\n## Current version\r\n\r\nThe current API version is `v1`. Access the endpoints at `http://api.remotebase.io/v1/`.\r\n\r\n\r\n## Endpoints\r\n\r\n### Companies\r\n\r\n* List companies\r\n\r\n  List all companies, or ones that match the filter.\r\n\r\n  `GET /companies`\r\n\r\n  *Parameters*\r\n\r\n  * name [string] - name of the company\r\n  * has_retreats [bool]\r\n  * technologies [string] - single value for a technology\r\n  * collaboration_methods [string] - A name of a collaboration method. Can supply multiple.\r\n  * communication_methods [string] - A name of a communication method. Can supply multiple.\r\n  * bootstrapped [bool]\r\n  * is_standalone [bool]\r\n  * team_size [string] - Possible values: `lt10`, `gte10lte25`, `gte25lte50`, `gt50`\r\n\r\n## License\r\n\r\nMIT\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
