@@ -18,7 +18,7 @@ the world needs to hear your voice, not mine.
 
 ## Current version
 
-The current API version is `v1`. Access the endpoints at `http://api.remotebase.io/`.
+Access the endpoints at `http://api.remotebase.io/`. `v1` is coming soon.
 
 
 ## Endpoints
