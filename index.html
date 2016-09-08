@@ -2,7 +2,7 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <title>RemoteBase API v1</title>
+    <title>Remotebase-api by remotebase</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
@@ -10,26 +10,24 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
   <body>
-    <a href="https://github.com/remotebase/remotebase-api"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
     <section class="page-header">
-      <h1 class="project-name">Remotebase API</h1>
+      <h1 class="project-name">Remotebase-api</h1>
       <h2 class="project-tagline">The official public API of RemoteBase</h2>
-      <!-- <a href="https://github.com/remotebase/remotebase-api" class="btn">View on GitHub</a>
+      <a href="https://github.com/remotebase/remotebase-api" class="btn">View on GitHub</a>
       <a href="https://github.com/remotebase/remotebase-api/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/remotebase/remotebase-api/tarball/master" class="btn">Download .tar.gz</a> -->
+      <a href="https://github.com/remotebase/remotebase-api/tarball/master" class="btn">Download .tar.gz</a>
     </section>
 
     <section class="main-content">
       <h1>
 <a id="remotebase-api" class="anchor" href="#remotebase-api" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>RemoteBase API</h1>
 
-<p>The official API of <a target="_blank" href="https://remotebase.io">RemoteBase</a>. <b>The API is still experimental and can change.</b></p>
+<p>The official API of <a href="https://remotebase.io">RemoteBase</a>.</p>
+
+<p><strong>Currently not versioned. The API is still experimental and can change.</strong></p>
 
 <h2>
-<a id="what-is-remotebase" class="anchor" href="#what-is-remotebase" aria-hidden="true">
-  <span aria-hidden="true" class="octicon octicon-link"></span></a>What is RemoteBase?
-</a>
-</h2>
+<a id="what-is-remotebase" class="anchor" href="#what-is-remotebase" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What is RemoteBase?</h2>
 
 <p>RemoteBase is an open database of remote companies and jobs, made by a developer.</p>
 
@@ -45,7 +43,7 @@ the world needs to hear your voice, not mine.</li>
 <h2>
 <a id="current-version" class="anchor" href="#current-version" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Current version</h2>
 
-<p>The current API version is <code>v1</code>. Access the endpoints at <code>http://api.remotebase.io/v1/</code>.</p>
+<p>The current API version is <code>v1</code>. Access the endpoints at <code>http://api.remotebase.io/</code>.</p>
 
 <h2>
 <a id="endpoints" class="anchor" href="#endpoints" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Endpoints</h2>
@@ -71,9 +69,41 @@ the world needs to hear your voice, not mine.</li>
 <li>communication_methods [string] - A name of a communication method. Can supply multiple.</li>
 <li>bootstrapped [bool]</li>
 <li>is_standalone [bool]</li>
-<li>team_size [string] - Possible values: <code>lt10</code>, <code>gte10lte25</code>, <code>gte25lte50</code>, <code>gt50</code>
+<li>team_size_min [number]</li>
+<li>team_size_max [number]</li>
+<li>page [int]</li>
+<li>per_page [int]</li>
+</ul>
+
+<p><em>Response</em></p>
+
+<pre><code>Status: 200 OK
+Link: &lt;http://api.remotebase.io/v1/companies?page=2&gt;; rel=next"
+
+[
+  {
+    name: "RemoteBase"
+    ...
+  },
+  {
+    ...
+  },
+  ...
+]
+</code></pre>
 </li>
 </ul>
+
+<h3>
+<a id="jobs" class="anchor" href="#jobs" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>jobs</h3>
+
+<ul>
+<li>
+<p>List jobs</p>
+
+<p>List all jobs on RemoteBase</p>
+
+<p><code>GET /jobs</code></p>
 </li>
 </ul>
 
@@ -90,6 +120,6 @@ the world needs to hear your voice, not mine.</li>
 
     </section>
 
-
+  
   </body>
 </html>
